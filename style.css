@@ -1,0 +1,26 @@
+body{
+    background-image: url(assets/leo-aura.jpg);
+    background-size: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#formAdocao{
+    background-color: rgba(0, 0, 0, 0.514);
+    display: grid;
+    padding: 25px;
+    align-items: center;
+    justify-items: center;
+    width: 600;
+    color: aliceblue;
+    border-radius: 20px;
+}
+#termos{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+#enviar{
+    opacity: 100%;
+}

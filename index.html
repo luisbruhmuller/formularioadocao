@@ -1,27 +1,72 @@
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>adoções de animais</title>
 </head>
+
 <body>
-    <form id="FormAdocao" action="registro">
-        <label for="nome"></label>
-        <input id="nome" type="text" name="nome" placeholder="nome completo" required>
-
-                <label for="nome"></label>
-        <input id="nome" type="text" name="nome" placeholder="nome " required>
-
-                <label for="email"></label>
-        <input id="email" type="text" name="email" placeholder="email " required>
-
-                <label for="telefone"></label>
-        <input id="telefone" type="text" name="telefone" placeholder="telefone " required>
-
-                <label for="CPF"></label>
-        <input id="CPF" type="text" name="CPF" placeholder="CPF " required>
-    </form>
+    <div id="formulario">
+        <form id="FormAdocao" action="registro">
+            <label for="nome">Digite seu nome:</label>
+            <input id="nome" type="text" name="nome" placeholder="nome completo" required>
+    
+            <label for="email">Digite seu email:</label>
+            <input id="email" type="text" name="email" placeholder="exemplo@exemplo.com" required>
+    
+            <label for="telefone">Digite seu numero de telefone</label>
+            <input id="telefone" type="text" name="telefone" placeholder="+00 00000-0000" required>
+    
+            <label for="CPF">Digite seu CPF:</label>
+            <input id="CPF" type="text" name="CPF" placeholder="000-000-000-00" required>
+    
+            <label for="idade">Digite sua idade</label>
+            <input id="idade" type="number" name="idade" placeholder="" required>
+    
+            <label for="cidade">Digite sua cidade:</label>
+            <input id="cidade" type="text" name="cidade" placeholder="xique-xique-BA" required>
+    
+            <label for="moradia">Sua moradia é:</label>
+            <select name="moradia" id="moradia">
+                <option value=""></option>
+                <option value="apt">apartamento</option>
+                <option value="casa">casa</option>
+            </select>
+    
+            <label for="quintal">tem quintal?</label>
+            <select name="quintal" id="quintal">
+                <option value=""></option>
+                <option value="sim">sim</option>
+                <option value="não">não</option>
+            </select>
+    
+            <label for="petantes">Ja teve um pet antes?</label>
+            <select id="petantes" name="petantes" required>
+                <option value=""></option>
+                <option value="sim">sim</option>
+                <option value="não">não</option>
+            </select>
+    
+    
+            <label for="horas_sozinho">Quantas horas o pet ficará sozinho</label>
+            <input id="horas_sozinho" type="number" name="horas_sozinho" placeholder="" required>
+    
+            <label for="motivo">Qual a motivação da adoção?</label>
+            <input id="motivo" type="text" name="motivo" placeholder="" required>
+    
+            <div id="termos">
+                <input id="termo" type="checkbox" name="termo" placeholder="termo " required>
+                <label for="termo">Eu aceito os termos de adoção</label>
+            </div>
+            <button id="enviar" onclick="verificar_aprovacao">
+                Enviar
+            </button>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
