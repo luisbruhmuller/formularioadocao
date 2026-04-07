@@ -94,6 +94,33 @@ window.onload = function () {
             alert("Erro: Seu motivo não é aceito.");
             return;
         }
-
+        let cpf1 = "111.111.111-11";
+        let cpf2 = "123.456.789-00";
+        let cpf3 = "00000000000";
+                
+        if (cpf == cpf1 || cpf == cpf2 || cpf == cpf3) {
+            alert("Bloqueado: Este CPF já adotou um animal na nossa ONG. CPF duplicado.");
+            return;
+        }
+        if (moradia == "apt" && quintal == "sim") {
+            alert("Erro: Como você mora em apartamento, não deveria colocar que tem quintal.");
+            return;
+        }
+        let usarEspacoExterno = prompt("O animal vai usar algum espaço externo? (Responda sim ou não)");
+        if (quintal == "não" && usarEspacoExterno == "sim") {
+            alert("Erro: Você não tem quintal, então como ele vai usar um espaço externo?");
+            return;
+        }
+        let grana = prompt("Você tem condições financeiras para comprar ração e vacinas? (Responda sim ou não)");
+        if (grana == "não") {
+            alert("Bloqueado: Infelizmente o envio foi trancado por falta de condições de cuidar do pet.");
+            return;
+        }
+        let decisaoMesmoDia = prompt("Você resolveu adotar esse animal hoje de repente? (Responda sim ou não)");
+        if (decisaoMesmoDia == "sim") {
+            alert("ALERTA: Isso é uma decisão impulsiva! Lembre-se que um pet pode viver 15 anos!");
+        }
+        alert("Que legal! Seu formulário estava certinho e foi enviado.");
+        document.getElementById("FormAdocao").submit();
     }
 }
