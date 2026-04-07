@@ -34,5 +34,26 @@ window.onload = function () {
             alert("Erro: Você precisa digitar sua idade.");
             return;
         }
+                if (cidade == "") {
+            alert("Erro: Você precisa digitar sua cidade.");
+            return;
+        }
+        if (moradia == "") {
+            alert("Erro: Você precisa escolher se mora em casa ou apartamento.");
+            return;
+        }
+        if (quintal == "") {
+            alert("Erro: Você precisa dizer se tem quintal ou não.");
+            return;
+        }
+        if (petantes == "") {
+            alert("Erro: Você precisa dizer se já teve pet antes.");
+            return;
+        }
+        if (horasSozinho == "" || isNaN(horasSozinho)) {
+            alert("Erro: O campo horas sozinho precisa ser um número.");
+            return;
+        }
+       
     }
 }
