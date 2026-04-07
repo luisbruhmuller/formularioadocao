@@ -14,5 +14,25 @@ window.onload = function () {
         let horasSozinho = document.getElementById("horas_sozinho").value;
         let motivo = document.getElementById("motivo").value;
         let termo = document.getElementById("termo").checked;
+               if (nome.length < 3) {
+            alert("Erro: O nome precisa ter pelo menos 3 letras.");
+            return;
+        }
+        if (email.indexOf("@") == -1) {
+            alert("Erro: O email precisa ter um arroba (@).");
+            return;
+        }
+        if (telefone.length < 8) {
+            alert("Erro: O telefone precisa ter pelo menos 8 números.");
+            return;
+        }
+        if (cpf == "") {
+            alert("Erro: Você precisa digitar o CPF.");
+            return;
+        }
+        if (idade == "") {
+            alert("Erro: Você precisa digitar sua idade.");
+            return;
+        }
     }
 }
