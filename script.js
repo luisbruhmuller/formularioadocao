@@ -73,13 +73,26 @@ window.onload = function () {
                 return;
             }
         }
-
         if (moradia == "casa") {
             let quintalSeguro = prompt("O seu quintal é seguro e sem buracos? (Responda sim ou não)");
             if (quintalSeguro != "sim") {
                 alert("Bloqueado: O quintal precisa ser seguro para o pet não fugir.");
                 return;
             }
+        }
+                if (horasSozinho > 8) {
+            let justificativa = prompt("O animal ficará sozinho muito tempo. Qual sua justificativa?");
+            if (justificativa == "" || justificativa == null) {
+                alert("Erro: É obrigatório dar uma justificativa válida.");
+                return;
+            }
+        }
+        if (petantes == "não") {
+            alert("Aviso importante: Como você nunca teve pet, a ONG vai fazer um acompanhamento depois!");
+        }
+        if (motivo == "quero" || motivo == "porque sim" || motivo == "pq sim" || motivo == "quero ter um") {
+            alert("Erro: Seu motivo não é aceito.");
+            return;
         }
 
     }
